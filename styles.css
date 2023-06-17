@@ -1,0 +1,762 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container .nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  position: relative;
+}
+.container .nav .logo {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.container .nav .categories {
+  width: 40%;
+  margin-right: 20px;
+}
+.container .nav .categories ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .nav .categories ul a {
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+}
+.container .nav .barMobile{
+  display: none;
+}
+
+.container .nav .mobileNav{
+  border: 1px solid black;
+  position: absolute;
+  /* position: fixed; */
+  top:100%;
+  right:0%;
+  z-index: 2;
+  width: 15em;
+  background: white;
+  height: 0px;
+  overflow: hidden;
+  /* display: none; */
+  transition: .3s ease;
+}
+.container .nav .mobileNav ul{
+  display: flex;
+  flex-direction:column;
+}
+.container .nav .mobileNav ul a{
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 2px;
+  background-color: rgba(255, 216, 166, 0.719);
+  text-decoration: none;
+  color: rgb(56, 56, 56);
+}
+.container .nav .mobileNav ul a li{
+  list-style-type: none;
+}
+/* .container .nav .mobileNav ul a:active{
+ background-color: red;
+} */
+.container .heroSection {
+  width: 100%;
+  height: 36em;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 247, 226);
+  background-color: rgb(255, 236, 188);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color;
+  color: white;
+  color: black;
+  position: relative;
+}
+.container .heroSection .first {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 90%;
+}
+.container .heroSection .first .innerLeft {
+  margin-top: 15em;
+  width: 50%;
+}
+
+
+.container .heroSection .first .innerLeft p {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.container .heroSection .first .innerLeft .shop {
+  font-weight: bold;
+  padding: 10px;
+  width: 15em;
+  background-color: rgb(80, 33, 6);
+  color: white;
+  border: 4px solid white;
+}
+.container .heroSection .first .innerLeft .image {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  display: flex;
+  height: 20em;
+  border-top-left-radius: 50%;
+  overflow: hidden;
+  background-color: black;
+  margin-top: 15px;
+}
+.container .heroSection .first .innerLeft .image img {
+  margin-left: 10px;
+}
+.container .heroSection .first .innerRight {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 80%;
+  overflow: hidden;
+  border-left: 4px solid rgb(0, 0, 0);
+  border-top: 4px solid rgb(0, 0, 0);
+  margin-top: 20px;
+  transition: 1s ease-in-out;
+}
+.container .heroSection .first .innerRight .indiv {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container .heroSection .first .innerRight img {
+  width: 100%;
+  position: absolute;
+  top: -60%;
+  
+}
+@media (max-width:942px) {
+  .container .heroSection .first .innerLeft {
+    margin-top: 10em;
+  }
+  .container .heroSection .first .innerRight img {
+  top: -40%;
+}
+}
+@media (max-width:816px) {
+  .container .heroSection .first .innerRight img {
+  top: -15%;
+}
+.container .heroSection .first .innerRight {
+  width: 60%;
+  height: 70%;
+}
+.container .heroSection .first {
+  align-items: center;
+}
+.container .heroSection .first .innerLeft {
+  margin-top: 0px;
+}
+}
+
+.container .heroSection .first .innerRight .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+}
+.container .heroSection .first .innerRight .wrapper .top {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  padding: 30px;
+  color: white;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.486);
+}
+.container .heroSection .first .innerRight .wrapper .bottom {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 51, 0, 0.329);
+}
+.container .heroSection .first .innerRight .wrapper .bottom button {
+  padding: 10px;
+}
+.container .heroSection .second {
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.container .heroSection .second .inner {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .heroSection .second .inner .indiv {
+  border: 5px groove rgb(255, 201, 25);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 5px;
+  overflow: hidden;
+}
+.container .main {
+  background-color: rgb(255, 174, 174);
+  width: 100%;
+  height: 36em;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .indiv {
+  border: 1px solid black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width:698px) {
+  .container .heroSection .first .innerRight {
+    width: 50%;
+    height: 50%;
+  }
+  .container .heroSection .first .innerRight img {
+    top: -40%;
+  }
+  .container .heroSection .first .innerLeft h1 {
+   font-size: 26px;
+}
+  .container .heroSection .first .innerLeft p {
+   font-size: 16px;
+}
+.container .heroSection .first .innerRight .wrapper .top ,
+.container .heroSection .first .innerRight .wrapper .bottom {
+  padding: 10px;
+}
+.container .heroSection .first .innerRight .wrapper .top h1{
+  font-size: 26px;
+}
+}
+
+@media (max-width:578px) {
+  .container .nav .categories ul a {
+    font-size: 14px;
+  }
+  .container .nav .categories {
+    width:60%
+  }
+  .container .nav .categories ul{
+    justify-content: space-around;
+  }
+  .container .heroSection .first {
+   flex-direction: column;
+  }
+  .container .heroSection .first .innerLeft {
+    width:70%;
+    text-align: center;
+    padding-top: 5em;
+  }
+  .container .heroSection .first .innerRight {
+    width:70%;
+    border:0px;
+    border-radius: 0px 40px 50px 60px;
+  }
+  .container .heroSection .first .innerRight img {
+    top: -70%;
+  }
+}
+
+@media (max-width:486px) {
+  .container .heroSection .first .innerRight .wrapper .top h1 {
+    font-size: 22px;
+ }
+ .container .heroSection .first .innerLeft{
+     width:90%
+ }
+}
+
+@media (max-width:589px) {
+  .container .nav .categories{
+    display: none;
+  }
+  .container .nav .barMobile{
+    display: block;
+  }
+  /* .container .nav .mobileNav{
+    display: block;
+  } */
+}
+.container .main .indiv img {
+  height: 40em;
+}
+.container .main .right {
+  position: absolute;
+  right: 0%;
+  margin-top: 10em;
+  margin-right: 10em;
+}
+
+.menSectionCont .nav .mobile,
+.menSectionCont .nav .comp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0%;
+  background-color: white;
+  border-bottom: 3px solid rgb(44, 10, 10);
+  width: 100%;
+  padding: 15px;
+}
+.menSectionCont .nav .mobile .logo,
+.menSectionCont .nav .comp .logo {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.menSectionCont .nav .mobile a,
+.menSectionCont .nav .comp a {
+  text-decoration: none;
+  color: black;
+}
+.menSectionCont .nav .mobile input,
+.menSectionCont .nav .comp input {
+  padding: 10px;
+}
+.menSectionCont .nav .mobile .searchBar,
+.menSectionCont .nav .comp .searchBar {
+  background-color: white;
+  border: 1px solid rgb(59, 11, 11);
+}
+.menSectionCont .nav .mobile .searchBar button,
+.menSectionCont .nav .comp .searchBar button {
+  padding: 10px;
+  background-color: rgb(59, 11, 11);
+  border: 1px solid inherit;
+  color: white;
+  height: 100%;
+  font-weight: bold;
+}
+.menSectionCont .nav .mobile .searchBar button i,
+.menSectionCont .nav .comp .searchBar button i {
+  color: white;
+  font-weight: bold;
+}
+.menSectionCont .nav .mobile .cart,
+.menSectionCont .nav .comp .cart {
+  position: relative;
+  border: 1px solid black;
+  width: 5em;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+.menSectionCont .nav .mobile .cart a,
+.menSectionCont .nav .comp .cart a {
+  color: white;
+  text-decoration: none;
+}
+.menSectionCont .nav .mobile .cart .circle,
+.menSectionCont .nav .comp .cart .circle {
+  width: 1em;
+  height: 1em;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 14%;
+  right: 10%;
+}
+.menSectionCont .nav .mobile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid orange;
+  width: 18em;
+  position: fixed;
+  top: 10%;
+  background-color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.menSectionCont .nav .mobile .cart {
+  margin-top: 10px;
+}
+.menSectionCont .nav .mobile .cart a {
+  color: white;
+  text-decoration: none;
+}
+.menSectionCont .nav .go {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.menSectionCont .nav .icon {
+  display: none;
+}
+.menSectionCont .others {
+  background: url("images/landingMan.webp") rgba(255, 227, 101, 0.055);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  padding-top: 3em;
+  width: 100%;
+}
+.menSectionCont .others .littleNav {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3em;
+}
+.menSectionCont .others .littleNav select {
+  padding: 10px;
+}
+.menSectionCont .others .littleNav select option {
+  padding: 10px;
+}
+.menSectionCont .others .contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.menSectionCont .others .contents .header {
+  margin-top: 1em;
+  color: rgb(71, 10, 10);
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.menSectionCont .others .contents .inner {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.menSectionCont .others .contents .inner .indiv {
+  width: 16em;
+  height: 20em;
+  border: 2px solid brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2px;
+  font-family: sans-serif;
+  cursor: pointer;
+  background-color: rgb(255, 223, 154);
+  color: rgb(51, 9, 9);
+}
+.menSectionCont .others .contents .inner .indiv img {
+  width: 50%;
+  height: 60%;
+}
+.menSectionCont .others .contents .inner .indiv input {
+  width: 3em;
+  height: 2.5em;
+}
+.menSectionCont .others .contents .inner .indiv .name {
+  font-weight: bold;
+  font-size: 19px;
+}
+.menSectionCont .others .contents .inner .indiv .price {
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menSectionCont .others .contents .inner .indiv .actions {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.menSectionCont .others .contents .inner .indiv .actions button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: rgb(65, 10, 10);
+  color: white;
+  border: 1px solid black;
+}
+.menSectionCont .others .contents .inner .indiv .actions button:hover {
+  color: rgb(65, 10, 10);
+  background-color: white;
+}
+.menSectionCont .footer {
+  width: 100%;
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.womenSectionCont .nav .mobile,
+.womenSectionCont .nav .comp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0%;
+  background-color: white;
+  border-bottom: 3px solid rgb(44, 10, 10);
+  width: 100%;
+  padding: 15px;
+}
+.womenSectionCont .nav .mobile .logo,
+.womenSectionCont .nav .comp .logo {
+  margin-left: 20px;
+  font-weight: bold;
+}
+.womenSectionCont .nav .mobile a,
+.womenSectionCont .nav .comp a {
+  text-decoration: none;
+  color: black;
+}
+.womenSectionCont .nav .mobile input,
+.womenSectionCont .nav .comp input {
+  padding: 10px;
+}
+.womenSectionCont .nav .mobile .searchBar,
+.womenSectionCont .nav .comp .searchBar {
+  background-color: white;
+  border: 1px solid rgb(59, 11, 11);
+}
+.womenSectionCont .nav .mobile .searchBar button,
+.womenSectionCont .nav .comp .searchBar button {
+  padding: 10px;
+  background-color: rgb(59, 11, 11);
+  border: 1px solid inherit;
+  color: white;
+  height: 100%;
+  font-weight: bold;
+}
+.womenSectionCont .nav .mobile .searchBar button i,
+.womenSectionCont .nav .comp .searchBar button i {
+  color: white;
+  font-weight: bold;
+}
+.womenSectionCont .nav .mobile .cart,
+.womenSectionCont .nav .comp .cart {
+  position: relative;
+  border: 1px solid black;
+  width: 5em;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+.womenSectionCont .nav .mobile .cart a,
+.womenSectionCont .nav .comp .cart a {
+  color: white;
+  text-decoration: none;
+}
+.womenSectionCont .nav .mobile .cart .circle,
+.womenSectionCont .nav .comp .cart .circle {
+  width: 1em;
+  height: 1em;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 14%;
+  right: 10%;
+}
+.womenSectionCont .nav .mobile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid orange;
+  width: 18em;
+  position: fixed;
+  top: 10%;
+  background-color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.womenSectionCont .nav .mobile .cart {
+  margin-top: 10px;
+}
+.womenSectionCont .nav .mobile .cart a {
+  color: white;
+  text-decoration: none;
+}
+.womenSectionCont .nav .go {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.womenSectionCont .nav .icon {
+  display: none;
+}
+.womenSectionCont .others {
+  background: url("images/landingWoman.jpeg") rgba(255, 227, 101, 0.055);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  padding-top: 3em;
+  width: 100%;
+}
+.womenSectionCont .others .littleNav {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3em;
+}
+.womenSectionCont .others .littleNav select {
+  padding: 10px;
+}
+.womenSectionCont .others .littleNav select option {
+  padding: 10px;
+}
+.womenSectionCont .others .contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.womenSectionCont .others .contents .header {
+  margin-top: 1em;
+  color: rgb(71, 10, 10);
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+.womenSectionCont .others .contents .inner {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+.womenSectionCont .others .contents .inner .indiv {
+  width: 16em;
+  height: 20em;
+  border: 2px solid brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2px;
+  font-family: sans-serif;
+  cursor: pointer;
+  background-color: rgb(255, 223, 154);
+  color: rgb(51, 9, 9);
+}
+.womenSectionCont .others .contents .inner .indiv img {
+  width: 50%;
+  height: 60%;
+}
+.womenSectionCont .others .contents .inner .indiv input {
+  width: 3em;
+  height: 2.5em;
+}
+.womenSectionCont .others .contents .inner .indiv .name {
+  font-weight: bold;
+  font-size: 19px;
+}
+.womenSectionCont .others .contents .inner .indiv .price {
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.womenSectionCont .others .contents .inner .indiv .actions {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.womenSectionCont .others .contents .inner .indiv .actions button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: rgb(65, 10, 10);
+  color: white;
+  border: 1px solid black;
+}
+.womenSectionCont .others .contents .inner .indiv .actions button:hover {
+  color: rgb(65, 10, 10);
+  background-color: white;
+}
+.womenSectionCont .footer {
+  width: 100%;
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
+  padding: 10px;
+  font-size: 25px;
+}
+
+@media (max-width: 978px) {
+  .menSectionCont .others .contents .inner,
+.womenSectionCont .others .contents .inner {
+    width: 95%;
+  }
+}
+@media (max-width: 552px) {
+  .menSectionCont .others .contents .inner .indiv,
+.womenSectionCont .others .contents .inner .indiv {
+    width: 80%;
+    height: 24em;
+  }
+  .menSectionCont .others .contents .inner .indiv img,
+.womenSectionCont .others .contents .inner .indiv img {
+    height: 70%;
+  }
+}
+@media (max-width: 722px) {
+  .menSectionCont .nav .comp .go,
+.womenSectionCont .nav .comp .go {
+    display: none;
+  }
+  .menSectionCont .nav .mobile,
+.womenSectionCont .nav .mobile {
+    display: block;
+  }
+  .menSectionCont .nav .icon,
+.womenSectionCont .nav .icon {
+    display: block;
+  }
+}
+
+
+/*# sourceMappingURL=styles.css.map */
+
+
+
