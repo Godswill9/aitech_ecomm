@@ -73,12 +73,12 @@ var heroText=target.querySelector(".indiv .top .desc")
 
 var landingStatements=[
     {
-        pic:"/images/menJacket.webp",
+        pic:"images/menJacket.webp",
         bigName:"Cool glasses",
         desc:"Explore varieties that suit your style"
     },
     {
-        pic:"/images/womanGown.jpg",
+        pic:"images/womanGown.jpg",
         bigName:"STAND OUT",
         desc:"Be fabulous!!"
     },
