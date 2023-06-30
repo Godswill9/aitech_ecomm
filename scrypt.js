@@ -17,31 +17,33 @@ var count=0
 var arr=[]
 
 
+
 addToCart.forEach((item, i)=>{
     item.addEventListener('click', ()=>{
         count+=1
         var elem=item.parentElement.parentNode
+        console.log(i)
         var obj={}
-        obj.img=elem.querySelector("img").src.slice(22,elem.querySelector("img").src.length )
+        obj.img=elem.querySelector("img").src.slice(22 , elem.querySelector("img").src.length )
         obj.productName=elem.querySelector(".name").textContent
         obj.productPrice=elem.querySelector(".price").textContent
         obj.index=i
         arr.push(obj)
         localStorage.setItem(`cartItem`, JSON.stringify(arr))
-        console.log(JSON.parse(localStorage.getItem("cartItem")))
+//         console.log(JSON.parse(localStorage.getItem("cartItem")))
     })
 })
 
-// indiv.forEach((item, i)=>{
-//     item.addEventListener('click', ()=>{
-//         var obj={}
-//         obj.img=item.querySelector("img").src.slice(22,item.querySelector("img").src.length )
-//         obj.productName=item.querySelector(".name").textContent
-//         obj.productPrice=item.querySelector(".price").textContent
-//         obj.index=i
-//         localStorage.setItem(`item`, JSON.stringify(obj))
-//     })
-// })
+indiv.forEach((item, i)=>{
+    item.addEventListener('click', ()=>{
+        var obj={}
+        obj.img=item.querySelector("img").src.slice(22,item.querySelector("img").src.length )
+        obj.productName=item.querySelector(".name").textContent
+        obj.productPrice=item.querySelector(".price").textContent
+        obj.index=i
+        localStorage.setItem(`item`, JSON.stringify(obj))
+    })
+})
 
 
 // // var values=JSON.parse(localStorage.getItem("cartItem"))
