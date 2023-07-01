@@ -6,8 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="carts.js" type="module" async defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        td, th{
+            border: 1px solid black;
+        }
+        th{
+            background-color: orange;
+            color: white;
+        }
+        td{
+            text-align: center;
+        }
+        table{
+            border-collapse: collapse;
+            width: 70%;
+            margin-left: 10px;
+        }
+        button{
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(255, 72, 0);
+            border: 1px solid rgb(255, 255, 255);
+            color: whitesmoke;
+        }
+        .total{
+            border: 1px solid black;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+       .total button{
+        padding: 14px;
+        font-size: 28px;
+        margin: 10px;
+       } 
+        img{
+            height: 7em;
+            width: 7em;
+        }
+        #quan{
+            width: 3em;
+        }
+    </style>
 </head>
 <body>
-   <div class="cartCont">sfu</div>
+   <div class="cartCont">
+      <h3>All my items</h3>
+      <table>
+        <tr>
+            <th>Product Img</th>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>action</th>
+            <!-- <img src='images/menSuit4.jpg'/> -->
+        </tr>
+      </table>
+   </div>
+   <div class="total">
+    <h1>Total price: <span>$200</span></h1>
+    <h3>Total quantity: <span>0</span></h3>
+    <button>Buy now!</button>
+   </div>
 </body>
 </html>

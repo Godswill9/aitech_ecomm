@@ -13,37 +13,70 @@ var indiv=document.querySelectorAll('.indiv')
 var addToCart=document.querySelectorAll(".actions button")
 var cartCont=document.querySelector(".cartCont")
 var search=document.getElementsByName("search")[0]
+const circleCount=document.querySelectorAll(".circle")[0]
+const MobileCircleCount=document.querySelectorAll(".circle")[1]
 var count=0
 var arr=[]
+var itemsCount=0
+var itemsArr=[]
+
+circleCount.textContent=itemsCount
+MobileCircleCount.textContent=itemsCount
 
 
 
-addToCart.forEach((item, i)=>{
-    item.addEventListener('click', ()=>{
-        count+=1
-        var elem=item.parentElement.parentNode
-        console.log(i)
+// addToCart.forEach((item, i)=>{
+//     item.addEventListener('click', ()=>{
+//         count+=1
+//         var elem=item.parentElement.parentNode
+//         console.log(i)
+//         var obj={}
+//         obj.img=elem.querySelector("img").src.slice(22 , elem.querySelector("img").src.length )
+//         obj.productName=elem.querySelector(".name").textContent
+//         obj.productPrice=elem.querySelector(".price").textContent
+//         obj.index=i
+//         arr.push(obj)
+//         localStorage.setItem(`cartItem`, JSON.stringify(arr))
+// //         console.log(JSON.parse(localStorage.getItem("cartItem")))
+//     })
+// })
+
+var arr=[]
+addToCart.forEach((items, i)=>{
+    items.addEventListener("click", ()=>{
+        if(arr.includes(i)){
+           alert("added already")
+            return;
+        }else{
+            arr.push(i)
+            itemsCount++
+            circleCount.textContent=itemsCount
+          MobileCircleCount.textContent=itemsCount
+        }
         var obj={}
-        obj.img=elem.querySelector("img").src.slice(22 , elem.querySelector("img").src.length )
-        obj.productName=elem.querySelector(".name").textContent
-        obj.productPrice=elem.querySelector(".price").textContent
-        obj.index=i
-        arr.push(obj)
-        localStorage.setItem(`cartItem`, JSON.stringify(arr))
-//         console.log(JSON.parse(localStorage.getItem("cartItem")))
+        var itemParent=items.parentElement.parentElement
+        var itemImg=itemParent.querySelector("img").src
+        var itemName=itemParent.querySelector(".name").textContent
+        var itemPrice=itemParent.querySelector(".price").textContent
+          obj={one:itemName,
+            two:itemPrice,
+            three:itemImg.slice(22, itemImg.length)
+        }
+      itemsArr.push(obj)
+     localStorage.setItem("allMyCarts", JSON.stringify(itemsArr))
     })
 })
 
-indiv.forEach((item, i)=>{
-    item.addEventListener('click', ()=>{
-        var obj={}
-        obj.img=item.querySelector("img").src.slice(22,item.querySelector("img").src.length )
-        obj.productName=item.querySelector(".name").textContent
-        obj.productPrice=item.querySelector(".price").textContent
-        obj.index=i
-        localStorage.setItem(`item`, JSON.stringify(obj))
-    })
-})
+// indiv.forEach((item, i)=>{
+//     item.addEventListener('click', ()=>{
+//         var obj={}
+//         obj.img=item.querySelector("img").src.slice(22,item.querySelector("img").src.length )
+//         obj.productName=item.querySelector(".name").textContent
+//         obj.productPrice=item.querySelector(".price").textContent
+//         obj.index=i
+//         localStorage.setItem(`item`, JSON.stringify(obj))
+//     })
+// })
 
 
 // // var values=JSON.parse(localStorage.getItem("cartItem"))
