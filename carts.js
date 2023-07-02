@@ -49,7 +49,6 @@ const individualRow=cartCont.querySelectorAll('.row')
  })
 
 
-
  var valueee="0"
  var valueee2="1"
 

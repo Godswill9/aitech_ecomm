@@ -15,6 +15,21 @@ var cartCont=document.querySelector(".cartCont")
 var search=document.getElementsByName("search")[0]
 const circleCount=document.querySelectorAll(".circle")[0]
 const MobileCircleCount=document.querySelectorAll(".circle")[1]
+const select=document.querySelector("select")
+
+
+select.addEventListener('change', function(){
+    // console.log(select.value)
+    indiv.forEach((item, i)=>{
+        var itemName=item.querySelector('.identity').textContent
+        // console.log(itemName, select.value)
+         if(select.value==itemName){
+            console.log(itemName, i, item)
+         }
+     })
+})
+
+
 var count=0
 var arr=[]
 var itemsCount=0
