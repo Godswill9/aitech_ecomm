@@ -16,18 +16,8 @@ var search=document.getElementsByName("search")[0]
 const circleCount=document.querySelectorAll(".circle")[0]
 const MobileCircleCount=document.querySelectorAll(".circle")[1]
 const select=document.querySelector("select")
+const allContents=document.querySelector(".inner")
 
-
-select.addEventListener('change', function(){
-    // console.log(select.value)
-    indiv.forEach((item, i)=>{
-        var itemName=item.querySelector('.identity').textContent
-        // console.log(itemName, select.value)
-         if(select.value==itemName){
-            console.log(itemName, i, item)
-         }
-     })
-})
 
 
 var count=0
@@ -37,24 +27,7 @@ var itemsArr=[]
 
 circleCount.textContent=itemsCount
 MobileCircleCount.textContent=itemsCount
-
-
-
-// addToCart.forEach((item, i)=>{
-//     item.addEventListener('click', ()=>{
-//         count+=1
-//         var elem=item.parentElement.parentNode
-//         console.log(i)
-//         var obj={}
-//         obj.img=elem.querySelector("img").src.slice(22 , elem.querySelector("img").src.length )
-//         obj.productName=elem.querySelector(".name").textContent
-//         obj.productPrice=elem.querySelector(".price").textContent
-//         obj.index=i
-//         arr.push(obj)
-//         localStorage.setItem(`cartItem`, JSON.stringify(arr))
-// //         console.log(JSON.parse(localStorage.getItem("cartItem")))
-//     })
-// })
+var itemId=-1
 
 var arr=[]
 addToCart.forEach((items, i)=>{
@@ -67,15 +40,18 @@ addToCart.forEach((items, i)=>{
             itemsCount++
             circleCount.textContent=itemsCount
           MobileCircleCount.textContent=itemsCount
+          itemId++
         }
         var obj={}
         var itemParent=items.parentElement.parentElement
         var itemImg=itemParent.querySelector("img").src
         var itemName=itemParent.querySelector(".name").textContent
         var itemPrice=itemParent.querySelector(".price").textContent
+
           obj={one:itemName,
             two:itemPrice,
-            three:itemImg.slice(22, itemImg.length)
+            three:itemImg.slice(22, itemImg.length),
+            id:itemId
         }
       itemsArr.push(obj)
      localStorage.setItem("allMyCarts", JSON.stringify(itemsArr))
@@ -100,11 +76,38 @@ addToCart.forEach((items, i)=>{
 // //     // cartCont.append(item.productName)
 // // })
 
-// search.addEventListener('input', (e)=>{
-//     console.log(e.target.value)
-// })
+var arr3=[]
 
-// console.log(search)
+search.addEventListener('input', (e)=>{
+    var searchText=search.value.toLowerCase()
+    const listItems=document.querySelectorAll(".indiv")
+    for (let i = 0; i < listItems.length; i++) {
+        const listItem = listItems[i];
+        const text = listItem.querySelector(".identity").textContent.toLowerCase();
+        
+        if (text.includes(searchText)) {
+          listItem.style.display = 'flex';  // Show the matching item
+        } else {
+          listItem.style.display = 'none';   // Hide non-matching items
+        }
+      }
+})
+
+
+select.addEventListener('change', ()=>{
+    const selected=select.value.toLowerCase()
+    const listItems=document.querySelectorAll(".indiv")
+    for (let i = 0; i < listItems.length; i++) {
+        const listItem = listItems[i];
+        const text = listItem.querySelector(".identity").textContent.toLowerCase();
+        
+        if (text.includes(selected)) {
+          listItem.style.display = 'flex';  // Show the matching item
+        } else {
+          listItem.style.display = 'none';   // Hide non-matching items
+        }
+      }
+})
 
 
 
